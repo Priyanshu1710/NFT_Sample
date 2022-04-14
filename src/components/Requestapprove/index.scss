@@ -1,0 +1,25 @@
+@import "../../assets/scss/variables.scss";
+
+.request-screen{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    .icon{
+        width: 200px;
+        margin-top: 3rem;
+    }
+    .request-card{
+        padding: 2.5rem 1.5rem;
+        border-radius: 1.5rem;
+        background: $background-dark2;
+        max-width: 480px;
+        text-align: center;
+        margin: auto;
+        img{
+            margin-bottom: 2rem;
+        }
+    }
+}

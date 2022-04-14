@@ -1,0 +1,217 @@
+@import "../../assets/scss/variables.scss";
+
+.dashboard-warpper {
+  .dashboard-content {
+    .ant-tabs {
+      .ant-tabs-ink-bar {
+        display: none;
+      }
+      .ant-tabs-nav {
+        &::before {
+          display: none;
+        }
+      }
+      .ant-tabs-nav-wrap {
+        border: 0;
+        .ant-tabs-nav-list {
+          .ant-tabs-tab {
+            margin: 0 0 0 12px;
+            .ant-tabs-tab-btn {
+              background: $background-dark2;
+              color: $white;
+              font-size: 13px;
+              padding: 6px 10px;
+              border-radius: 3px;
+            }
+            &.ant-tabs-tab-active {
+              .ant-tabs-tab-btn {
+                background: $secondary-color;
+              }
+            }
+          }
+        }
+      }
+      .ant-tabs-content {
+        .dashboard-list-wapper {
+          .dashboardcards-list {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            grid-gap: 20px;
+            padding: 15px 4px;
+            @media screen and (max-width: 1366px) {
+              grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+            @media screen and (max-width: 1024px) {
+              grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            @media screen and (max-width: 720px) {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            @media screen and (max-width: 540px) {
+              grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+            .dashboard-card {
+              border-radius: 10px;
+              position: relative;
+              width: 100%;
+              &::before {
+                content: "";
+                position: absolute;
+                background: $background-dark1;
+                top: 0;
+                left: 0;
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);
+                z-index: 1;
+                border-radius: 10px;
+              }
+              &::after {
+                content: "";
+                background: linear-gradient(
+                  91.79deg,
+                  #053c75 3.15%,
+                  #fe4350 85.66%
+                );
+                position: absolute;
+                top: -1px;
+                left: -1px;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                border-radius: 10px;
+                opacity: 0.5;
+              }
+              .dashboard-card-inner {
+                position: relative;
+                z-index: 2;
+                padding: 2px;
+                .dashboard-card-upper {
+                  height: 190px;
+                  width: 100%;
+                  border-radius: 10px 10px 0 0;
+                  display: flex;
+                  justify-content: center;
+                  overflow: hidden;
+                  position: relative;
+                  object-fit: cover;
+                  img {
+                    border-radius: 10px 10px 0 0;
+                  }
+                  .card-overlay {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba($primary-color, 0.4);
+                    display: none;
+                    transition: all ease-in 0.2s;
+                    .card-overlay-inner {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 100%;
+                      height: 100%;
+                      .ant-btn {
+                        width: 30px;
+                        height: 30px;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 8px;
+                        .icon {
+                          fill: $white;
+                          max-height: 16px;
+                        }
+                      }
+                    }
+                  }
+                }
+                .dashboard-card-bottom {
+                  padding: 15px;
+                  h3 {
+                    margin-bottom: 0;
+                    font-weight: 600;
+                  }
+                  p {
+                    color: $white;
+                    margin-bottom: 0;
+                    font-size: 13px;
+                  }
+                  .mint-nft-btn {
+                    padding: 0 8px;
+                    height: 22px;
+                    margin-top: 4px;
+                    margin-right: 10px;
+                  }
+                  .list-price {
+                    color: $white;
+                    padding: 2px 0 0;
+                    border-radius: 3px;
+                    font-size: 12px;
+                    display: block;
+                    border: 1px solid $background-dark1;
+
+                    white-space: nowrap;
+                    overflow: hidden !important;
+                    text-overflow: ellipsis;
+                    span {
+                      color: $text-color-label-dark;
+                      word-wrap: break-all;
+                    }
+                  }
+                }
+                &:hover {
+                  .card-overlay {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.thumbpreview-modal {
+  .image-priview {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    max-height: 400px;
+    img {
+      max-height: 400px;
+      width: 100%;
+    }
+  }
+  .action-bar {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ant-btn {
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      .icon {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.loading_animation {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+  }
+}

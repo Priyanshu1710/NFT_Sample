@@ -1,0 +1,90 @@
+@import "../../../assets/scss/variables.scss";
+
+.info-drawer {
+  .ant-drawer-content-wrapper {
+    max-width: 100%;
+    .ant-drawer-content {
+      background: $background-dark2;
+      .ant-drawer-wrapper-body {
+        .ant-drawer-header {
+          background: none;
+          border: 0;
+          color: $white;
+          padding-bottom: 0;
+          .ant-drawer-close {
+            display: none;
+            @media screen and (max-width: 600px) {
+              display: block;
+            }
+            svg {
+              fill: $secondary-color;
+            }
+          }
+          .ant-drawer-title {
+            color: $white;
+            font-size: 1.3rem;
+          }
+        }
+        .ant-drawer-body {
+          .info-drawer-inner {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            .info-drawer-upper {
+              .info-image {
+                max-height: 400px;
+                height: 400px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  max-width: 100%;
+                  max-height: 100%;
+                }
+              }
+              .info-details {
+                ul {
+                  list-style-type: none;
+                  padding-left: 0;
+                  margin-top: 15px;
+                  li {
+                    display: flex;
+                    align-items: center;
+                    padding: 5px 0;
+                    label {
+                      color: $text-color-label-dark;
+                      width: 40%;
+                    }
+                    p {
+                      margin-bottom: 0;
+                      color: $white;
+                    }
+                  }
+                }
+              }
+            }
+            .info-drawer-bottom {
+              margin-top: auto;
+              position: sticky;
+              bottom: 0;
+              display: flex;
+              align-items: center;
+              .float-btn {
+                width: 100%;
+              }
+              .action-btn {
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
+                .icon {
+                  fill: $white;
+                  height: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

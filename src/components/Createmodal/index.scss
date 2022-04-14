@@ -1,0 +1,47 @@
+@import "../../assets/scss/variables.scss";
+
+.creatasset-modal {
+  .ant-modal-header {
+    padding-top: 20px;
+  }
+  .ant-upload {
+    background: none;
+    padding: 20px;
+    color: $white;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    p {
+      color: $white !important;
+    }
+    .ant-divider {
+      max-width: 120px;
+      min-width: auto;
+      margin: 20px auto;
+      border-color: $secondary-color;
+    }
+  }
+  .ant-upload-list {
+    .ant-upload-list-item {
+      background: none;
+      .ant-upload-list-item-info {
+        background: none !important;
+        .ant-upload-text-icon {
+          svg {
+            fill: $secondary-color;
+          }
+        }
+        .ant-upload-list-item-name {
+          color: $white;
+        }
+      }
+    }
+    .ant-upload-list-item-card-actions {
+      svg {
+        fill: $white;
+      }
+    }
+  }
+  .ant-form-item-label > label {
+    color: white;
+  }
+}
